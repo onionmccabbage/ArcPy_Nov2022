@@ -4,6 +4,8 @@ arcpy.env.overwriteOutput = True
 
 fc = 'cities.shp'
 
+
+
 # check if a shape exists
 if arcpy.Exists(fc):
     myshp = arcpy.da.Describe(fc)
@@ -12,4 +14,9 @@ if arcpy.Exists(fc):
     print(myshp['file'])
     print(myshp['shapeType'])
     print(myshp['spatialReference'])
+    # we can examine hte arcpy geospatial ref object (its not a dictionary)
+    # for (k,v) in myshp['spatialReference'].items(): # nope - not a dict
+    #     print(k, v)
+    print( myshp['spatialReference'].name )
+    print( myshp['spatialReference'].type )
 
