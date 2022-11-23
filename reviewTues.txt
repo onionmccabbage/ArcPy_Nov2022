@@ -1,0 +1,11 @@
+ArcGIS and ArcPy Review Exerise 40 mins - but we will see
+===============================
+Do this all in new Python file(s) OR in Notebooks
+Continue with the 'ex8' resources. 
+Write code to create a duplicate of all the airports
+In this copy, change all Seaplane Bases to 'Sea'
+Then make an extract of all airports where TotalENP < 1000 (as a parameter in a function)
+In ArcGIS add this extract to the map
+
+Show-and-tell - talk through the code and see the results
+
