@@ -1,0 +1,120 @@
+Meeting chat
+Message List
+Indicia Instructor joined the conversation.
+Indicia Instructor joined the conversation.
+Indicia Instructor named the meeting Introduction to Python for ArcGIS course.
+Indicia Instructor named the meeting Introduction to Python for ArcGIS course.
+Blair McLean was invited to the meeting.
+Blair McLean was invited to the meeting.
+Monday
+Meeting started
+Monday 09:27 Meeting started
+Ferguson, Andrew has temporarily joined the chat.
+Ferguson, Andrew has temporarily joined the chat.
+Gorry, Phil has temporarily joined the chat.
+Gorry, Phil has temporarily joined the chat.
+Link https://developers.arcgis.com/document... by Indicia Instructor
+Indicia InstructorMonday 09:55
+https://developers.arcgis.com/documentation/
+
+Url Preview for Documentation | ArcGIS Developers
+Documentation | ArcGIS Developers
+developers.arcgis.com
+Link https://learn.arcgis.com/en/gallery/#?... by Indicia Instructor
+Indicia InstructorMonday 09:56
+https://learn.arcgis.com/en/gallery/#?q=python&p=arcgispro
+
+Link https://learngis.maps.arcgis.com/home/... by Indicia Instructor
+Indicia InstructorMonday 09:58
+https://learngis.maps.arcgis.com/home/group.html?id=8ad8348a2ce4477c8dbb4d4bd8aa18c8&view=list#content
+
+C:\Users\rb17\AppData\Local\Programs\ArcGIS... by Indicia Instructor
+Indicia InstructorMonday 11:47
+C:\Users\rb17\AppData\Local\Programs\ArcGIS\Pro\bin
+
+C:\Users\rb17\AppData\Local\Programs\ArcGIS... by Indicia Instructor
+Indicia InstructorMonday 11:53
+C:\Users\rb17\AppData\Local\Programs\ArcGIS\Pro\bin\Python\envs\arcgispro-py3
+
+Link https://github.com/onionmccabbage/ArcP... by Indicia Instructor
+Indicia InstructorMonday 14:18
+https://github.com/onionmccabbage/ArcPy_Nov2022
+
+Url Preview for GitHub - onionmccabbage/ArcPy_Nov2022
+GitHub - onionmccabbage/ArcPy_Nov2022
+Contribute to onionmccabbage/ArcPy_Nov2022 development by creating an account on GitHub.
+
+github.com
+# within ArcGIS Pro there is no need to imp... by Indicia Instructor
+Indicia InstructorMonday 15:26
+# within ArcGIS Pro there is no need to import arcpy
+
+import arcpy # in case we export this to run outside ArcGIS
+
+
+
+# some analysis NB press TAB for code hinting and autocompletion
+
+#                  we can refer to assets in this project
+
+# assets within this project do not needan extenstion
+
+# assets NOT (yet) in this project we need an extension
+
+# arcpy.Clip_analysis('parks', 'zip', 'c:/PythonPro/Ex05/parks_clip.shp')arcpy.Clip_analysis('parks', 'zip', 'c:/PythonPro/Ex05/parks_clip.shp')
+
+# exactly the same as
+
+arcpy.analysis.Clip('parks', 'zip', 'c:/PythonPro/Ex05/parks_clip.shp')
+
+
+
+
+
+# we can specify the workspace
+
+arcpy.env.workspace = 'C:/PythonPro/Ex05' # or r'C\PythonPro\Ex05'
+
+# NB shift-enter runs this cell and adds a cell below
+
+
+
+# we can run a buffer analysis                                           dissolve all overlaps
+
+arcpy.Buffer_analysis('facilities.shp', 'facilities_buffer.shp', '500 meters', '', '', 'ALL')
+
+
+
+# It often makes sense to declare variables to hold our values
+
+in_features = 'bike_routes.shp'
+
+clip_features = 'zip.shp'
+
+out_features = 'bike_clip.shp'
+
+xy_tolerance = '' # rarely used
+
+# we can use our variables in a tool
+
+arcpy.Clip_analysis(in_features, clip_features, out_features, xy_tolerance)
+
+
+
+# ALL geoprocessing tools in ArcGIS Pro are functions in ArcPy
+
+# there are additional functions in ArcPy
+
+arcpy.Exists('hospitals.shp') # True or False, if it is in current workspace
+
+arcpy.env.workspace = "C:/PythonPro/Ex05" ... by Indicia Instructor
+Indicia InstructorMonday 15:50
+arcpy.env.workspace = "C:/PythonPro/Ex05"
+prjfile = "C:\\PythonPro\\Ex05\\facilities.prj"
+spatial_ref = arcpy.SpatialReference(prjfile)
+arcpy.env.overwriteOutput = True
+arcpy.env.outputCoordinateSystem = spatial_ref
+
+Meeting ended: at Monday 16:31 after 7 hours 4 minutes 33 seconds
+Monday 16:31 Meeting ended: 7h 4m 33s
+Attendance
